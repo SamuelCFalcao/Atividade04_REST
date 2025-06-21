@@ -14,11 +14,9 @@ public class Client_REST
     {
         try 
         {
-            // 1. Listar operações disponíveis
             System.out.println("Operações disponíveis:");
             listOperations();
 
-            // 2. Escolher operação
             Scanner scanner = new Scanner(System.in);
             System.out.print("\nDigite a operação (ex: sum, sub, mul, div): ");
             String operacao = scanner.nextLine();
@@ -29,7 +27,6 @@ public class Client_REST
             System.out.print("Digite o valor de B: ");
             int b = scanner.nextInt();
 
-            // 3. Realizar operação
             executeOperation(operacao, a, b);
 
         } 

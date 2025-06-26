@@ -12,7 +12,6 @@ import java.util.Map;
 @RequestMapping("/api")
 public class DogController 
 {
-
     private final DogService dogService;
 
     public DogController(DogService dogService) 

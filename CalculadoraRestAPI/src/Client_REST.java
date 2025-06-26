@@ -35,7 +35,7 @@ public class Client_REST
         {
             e.printStackTrace();
         }
-    }
+    } 
 
     private static void listOperations() throws Exception 
     {
@@ -43,9 +43,7 @@ public class Client_REST
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
 
-        BufferedReader br = new BufferedReader(
-            new InputStreamReader(conn.getInputStream())
-        );
+        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
         String line;
         while ((line = br.readLine()) != null) 
@@ -73,9 +71,7 @@ public class Client_REST
         os.flush();
         os.close();
 
-        BufferedReader br = new BufferedReader(
-            new InputStreamReader(conn.getInputStream())
-        );
+        BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
         String line;
         System.out.println("\nResultado:");

@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: Dog Lover Hub API
+  version: "1.0"
+paths:
+  /api/breeds:
+    get:
+      summary: Lista todas as raças
+      parameters:
+        - in: query
+          name: format
+          required: false
+          schema:
+            type: string
+            enum: [json, xml]
+      responses:
+        "200":
+          description: Lista de raças
+  /api/favorites:
+    post:
+      summary: Adiciona um favorito
+      parameters:
+        - in: query
+          name: imageUrl
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Imagem adicionada
+        "400":
+          description: Imagem já favorita
+    get:
+      summary: Lista os favoritos
+      responses:
+        "200":
+          description: Lista retornada
+    delete:
+      summary: Remove um favorito
+      parameters:
+        - in: query
+          name: imageUrl
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Favorito removido
+        "404":
+          description: Favorito não encontrado
